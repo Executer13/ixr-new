@@ -1,0 +1,20 @@
+# Dependencies for the new IXR Suite
+
+# Brain-Computer Interface & sensor connectivity:
+brainflow>=3.0.0
+pylsl>=1.12.0
+
+# Numerical computations:
+numpy>=1.20.0
+
+# Real-time plotting & data visualization:
+matplotlib>=3.4.0
+
+# Modern GUI framework (PyQt5 provides a native look and can embed matplotlib seamlessly):
+PyQt5>=5.15.0
+
+# Optional: High-performance plotting alternative (if needed):
+pyqtgraph>=0.12.0
+
+scipy
+bleak
