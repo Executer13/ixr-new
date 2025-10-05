@@ -1,0 +1,62 @@
+# IXR-Suite folder
+IXR-Suite/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# PyQt
+*.ui.autosave
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+.ixr_suite/
+
+# Configuration
+config.json
+*.local.json
+
+# Data files
+*.csv
+*.h5
+*.hdf5
+data/
+recordings/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation
+docs/_build/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+temp/
