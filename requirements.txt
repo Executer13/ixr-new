@@ -1,20 +1,68 @@
-# Dependencies for the new IXR Suite
+# ============================================================================
+# IXR Suite Dependencies
+# Cross-platform compatible: Windows 10+, macOS 10.13+, Linux (Ubuntu 20.04+)
+# ============================================================================
 
-# Brain-Computer Interface & sensor connectivity:
+# Brain-Computer Interface & sensor connectivity
+# Note: BrainFlow supports Windows, macOS, and Linux
 brainflow>=3.0.0
+
+# Lab Streaming Layer for real-time data streaming
+# Note: Works on all platforms, may require firewall configuration on Windows
 pylsl>=1.12.0
 
-# Numerical computations:
+# Numerical computations
 numpy>=1.20.0
 
-# Real-time plotting & data visualization:
+# Signal processing and analysis
+scipy>=1.7.0
+
+# Real-time plotting & data visualization
 matplotlib>=3.4.0
 
-# Modern GUI framework (PyQt5 provides a native look and can embed matplotlib seamlessly):
+# Modern GUI framework
+# Note: PyQt5 provides native look and feel on all platforms
 PyQt5>=5.15.0
 
-# Optional: High-performance plotting alternative (if needed):
+# High-performance plotting for real-time visualization
+# Note: OpenGL acceleration requires proper graphics drivers
+#   Windows: Update GPU drivers from manufacturer
+#   macOS: Built-in support (Metal backend)
+#   Linux: May need mesa-utils and libgl1-mesa-glx
 pyqtgraph>=0.12.0
 
-scipy
-bleak
+# Bluetooth Low Energy support for Polar H10
+# Platform-specific notes:
+#   Windows: Requires Windows 10+ with BLE support, no additional drivers needed
+#   macOS: Requires macOS 10.13+, grant Bluetooth permissions in System Preferences
+#   Linux: Requires bluez package (sudo apt-get install bluez)
+bleak>=0.19.0
+
+# ============================================================================
+# Platform-Specific Installation Notes
+# ============================================================================
+#
+# WINDOWS:
+# --------
+# 1. Python 3.8+ (64-bit recommended)
+# 2. Visual C++ Redistributable may be required for some packages
+# 3. Bluetooth: Ensure BLE adapter is enabled in Device Manager
+# 4. Firewall: Allow Python through firewall for LSL networking
+#
+# MACOS:
+# ------
+# 1. Python 3.8+ (via Homebrew recommended: brew install python@3.10)
+# 2. Xcode Command Line Tools: xcode-select --install
+# 3. Bluetooth: Grant Bluetooth permissions in System Preferences > Security & Privacy
+# 4. May need to allow Python in Security & Privacy settings
+#
+# LINUX (Ubuntu/Debian):
+# ----------------------
+# 1. Python 3.8+: sudo apt-get install python3 python3-pip
+# 2. Bluetooth: sudo apt-get install bluez
+# 3. Bluetooth permissions: sudo usermod -a -G bluetooth $USER
+# 4. Qt dependencies: sudo apt-get install python3-pyqt5 libxcb-xinerama0
+# 5. OpenGL: sudo apt-get install mesa-utils libgl1-mesa-glx
+# 6. Audio (optional): sudo apt-get install libasound2-dev
+#
+# ============================================================================
